@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/animate.css-master/animate.css">
+    <title>Animate</title>
+</head>
+
+<body>
+    <section>
+        <h1 class="section-title">Animation scroll</h1>
+        <div class="animation-wrapper">
+            <div class="animation-image">
+                <img class="wow flipInX" src="img/animate1.jpeg" width="640" height="426" alt="">
+            </div>
+            <div class="animation-image">
+                <img class="wow flipInY" src="img/animate2.jpeg" width="640" height="426" alt="">
+            </div>
+            <div class="animation-image">
+                <img class="wow zoomIn" data-wow-offset="100" src="img/animate3.jpeg" width="640" height="426" alt="">
+            </div>
+            <div class="animation-image">
+                <img class="wow flipInX" src="img/animate4.jpeg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <script src="WOW-master/dist/wow.min.js"></script>
+    <script>
+        new WOW().init();
+
+    </script>
+
+</body>
+
+</html>

@@ -2,51 +2,51 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="style.css">
-	<title>Parallax</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Parallax</title>
 </head>
 
 <body>
-	<section class=" section section-one">
-		<h1 class="section-title">Text and image Parallax</h1>
-	</section>
-	<section class="section section-two">
-		<h1 class="section-title">Text and image Parallax</h1>
-	</section>
-	<section class="section section-three">
-		<h1 class="section-title">Text and image Parallax</h1>
-	</section>
-	<section class="section section-four">
-		<h1 class="section-title">Text and image Parallax</h1>
-	</section>
+    <section class=" section section-one">
+        <h1 class="section-title">Text and image Parallax</h1>
+    </section>
+    <section class="section section-two">
+        <h1 class="section-title">Text and image Parallax</h1>
+    </section>
+    <section class="section section-three">
+        <h1 class="section-title">Text and image Parallax</h1>
+    </section>
+    <section class="section section-four">
+        <h1 class="section-title">Text and image Parallax</h1>
+    </section>
 
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script>
-		//Text and image parallax
-		$(window).scroll(function() {
-			var sectionOne = $('.section-one').offset(),
-				sectionTwo = $('.section-two').offset(),
-				sectionThree = $('.section-three').offset(),
-				sectionFour = $('.section-four').offset(),
-				wScroll = $(this).scrollTop();
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        //Text and image parallax
+        $(window).scroll(function() {
+            var sectionOne = $('.section-one').offset(),
+                sectionTwo = $('.section-two').offset(),
+                sectionThree = $('.section-three').offset(),
+                sectionFour = $('.section-four').offset(),
+                wScroll = $(this).scrollTop();
 
 
-			$('.section-one h1').css({
-				'transform': 'translate(0, ' + (wScroll - sectionOne.top) / 0.5 + '%)'
-			});
-			$('.section-two h1').css({
-				'transform': 'translate(0, ' + (wScroll - sectionTwo.top) / 0.5 + '%)'
-			});
-			$('.section-three h1').css({
-				'transform': 'translate(0, ' + (wScroll - sectionThree.top) / 0.5 + '%)'
-			});
-			$('.section-four h1').css({
-				'transform': 'rotate(' + (wScroll - sectionFour.top) / 0.5 + 'deg)'
-			});
-		});
+            $('.section-one h1').css({
+                'transform': 'translate(0, ' + (wScroll - sectionOne.top) / 0.5 + '%)'
+            });
+            $('.section-two h1').css({
+                'transform': 'translate(0, ' + (wScroll - sectionTwo.top) / 0.5 + '%)'
+            });
+            $('.section-three h1').css({
+                'transform': 'translate(0, ' + (wScroll - sectionThree.top) / 0.5 + '%)'
+            });
+            $('.section-four h1').css({
+                'transform': 'rotate(' + (wScroll - sectionFour.top) / 0.5 + 'deg)'
+            });
+        });
 
-	</script>
+    </script>
 </body>
 
 </html>

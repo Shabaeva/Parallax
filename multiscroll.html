@@ -2,42 +2,55 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" type="text/css" href="jquery.multiscroll.css" />
-	<title>Multiscroll</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.multiscroll.css" />
+    <title>Multiscroll</title>
 </head>
 
-<body>
-	<section>
-		<h1 class="section-title">Multiscroll</h1>
-		<div id="multiscroll">
-			<div class="ms-left">
-				<div class="ms-section">Left1</div>
-				<div class="ms-section">Left2</div>
-				<div class="ms-section">Left3</div>
-			</div>
-			<div class="ms-right">
-				<div class="ms-section">Right1</div>
-				<div class="ms-section">Right2</div>
-				<div class="ms-section">Right3</div>
-			</div>
-		</div>
+<body class="multiscroll-body">
+    <section>
+        <h1 class="section-title multiscroll-title">Multiscroll</h1>
+        <ul id="menu">
+            <li data-menuanchor="first" class="active"><a href="#first">First section</a></li>
+            <li data-menuanchor="second"><a href="#second">Second section</a></li>
+            <li data-menuanchor="third"><a href="#third">Third section</a></li>
+        </ul>
+        <div id="multiscroll">
+            <div class="ms-left">
+                <div class="ms-section">Left1</div>
+                <div class="ms-section">Left2</div>
+                <div class="ms-section">Left3</div>
+            </div>
+            <div class="ms-right">
+                <div class="ms-section section1"></div>
+                <div class="ms-section section2"></div>
+                <div class="ms-section section3"></div>
+            </div>
+        </div>
 
-	</section>
+    </section>
 
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/jquery.multiscroll.min.js"></script>
-	<script src="js/jquery.easings.min.js"></script>
-	<script>
-		$(function() {
-			$('#multiscroll').multiscroll({
-				verticalCentered: false,
-			});
-		});
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.multiscroll.min.js"></script>
+    <script src="js/jquery.easings.min.js"></script>
+    <script>
+        $(function() {
+            $('#multiscroll').multiscroll({
+                verticalCentered: true,
+                sectionsColor: ["#000", "#8C0319", "#000"],
+                navigation: true,
+                navigationPosition: 'right',
+                anchors: [
+                    'first',
+                    'second',
+                    'third'
+                ]
+            });
+        });
 
-	</script>
+    </script>
 </body>
 
 </html>
